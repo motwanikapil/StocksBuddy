@@ -6,6 +6,7 @@ import NiftySensexComponent from '../components/Home/NiftySensexComponent'
 import TopGainersComponent from '../components/Home/TopGainersComponent'
 import TopLosersComponent from '../components/Home/TopLosersComponent'
 import TopStockNewsComponent from '../components/Home/TopStockNewsComponent'
+import { gainerData } from '../Data/data.js'
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -13,7 +14,7 @@ const HomeScreen = ({ navigation }) => {
       <ScrollView style={styles.container}>
         <Header />
         <NiftySensexComponent />
-        <TopGainersComponent />
+        <TopGainersComponent gainerData={gainerData} />
         <TopLosersComponent />
         <TopStockNewsComponent />
       </ScrollView>

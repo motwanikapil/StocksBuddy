@@ -7,7 +7,7 @@ const CurrencyScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
-      <Text>Currency Screen</Text>
+
       <BottomTabsComponent navigation={navigation} active='Currency' />
     </SafeAreaView>
   )

@@ -1,4 +1,4 @@
-export const DATA = [
+export const gainerData = [
   {
     symbol: 'SGLY',
     name: 'Singularity Future Technology Ltd.',

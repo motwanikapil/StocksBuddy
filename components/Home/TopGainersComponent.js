@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   FlatList,
   ScrollView,
@@ -7,14 +7,33 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { DATA } from '../../Data/data'
+import { FINANCIAL_MODELING_PREP_KEY } from '../../keys'
 
-const TopGainersComponent = () => {
+const TopGainersComponent = ({ gainerData }) => {
+  const [gainersData, setGainersData] = useState(gainerData)
+
+  //   const getDataForGainers = () => {
+  //     fetch(
+  //       `https://financialmodelingprep.com/api/v3/stock_market/gainers?apikey=ef8453a632ea893d749e36321583cf19`
+  //     )
+  //       .then((response) => response.json())
+  //       .then((responseJson) => setGainersData(responseJson))
+  //       .catch((error) => {
+  //         console.error(error)
+  //       })
+  //   }
+
+  // useEffect(() => {
+  //   fetch(
+  //     'https://financialmodelingprep.com/api/v3/stock_market/gainers?apikey=ef8453a632ea893d749e36321583cf19'
+  //   ).then((response) => response.json()).then((responseJson) => { setGainersData(responseJson) }).catch((error) => { console.error(error) })
+  // }, [gainersData])
+
   return (
     <View style={styles.container}>
       <Text style={styles.titleStyle}>Top Gainers 🏆</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {DATA.map((item, index) => (
+        {gainersData.map((item, index) => (
           <TouchableOpacity
             style={styles.topGainerContainer}
             key={index}

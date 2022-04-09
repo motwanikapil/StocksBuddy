@@ -10,6 +10,10 @@ import {
 import { DATA } from '../../Data/losersData'
 
 const TopLosersComponent = () => {
+
+    const losersDataApiUrl =
+      'https://financialmodelingprep.com/api/v3/stock_market/losers?apikey='
+
   return (
     <View style={styles.container}>
       <Text style={styles.titleStyle}>Top Losers 😞</Text>
